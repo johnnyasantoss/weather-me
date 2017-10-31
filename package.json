@@ -1,0 +1,8 @@
+{
+  "name": "weather-me",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Johnny Santos <johnnyadsantos@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
