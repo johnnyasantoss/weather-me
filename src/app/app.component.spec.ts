@@ -1,4 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
+
+import { WeatherWidgetModule } from "./weather-widget/weather-widget.module";
+
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -7,6 +10,9 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      imports: [
+        WeatherWidgetModule
+      ]
     })
       .compileComponents()
       .catch(err => {
@@ -17,10 +23,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  }));
-  it('should have as title \'app\'', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app');
   }));
 });

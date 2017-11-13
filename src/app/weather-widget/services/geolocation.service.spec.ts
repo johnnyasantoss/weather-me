@@ -22,4 +22,14 @@ describe('GeolocationService', () => {
         expect(typeof result).toBe('boolean');
       })
   );
+
+  it('"getGeolocationAsync" should return a Promise'
+    , inject([GeolocationService]
+      , (service: GeolocationService) => {
+        expect('getGeolocationAsync' in service).toBeTruthy();
+
+        const result = service.getGeolocationAsync();
+        expect(result instanceof Promise).toBeTruthy();
+      })
+  );
 });
