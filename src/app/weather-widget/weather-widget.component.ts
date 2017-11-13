@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class WeatherWidgetComponent {
 
+  hasntGeoAccess = false;
+
   constructor() { }
 
 }
