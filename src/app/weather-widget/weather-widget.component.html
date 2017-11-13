@@ -1,6 +1,6 @@
 <div class="container-fluid">
-    <input type="text" #searchText ng-if="hasntGeoAccess" />
+    <input type="text" [ngModel]="searchText" [class.hidden]="hasntGeoAccess" />
     <div class="col-xs-3">
-
+        {{ searchText }}
     </div>
 </div>

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { GeolocationResult } from '../model/geolocationresult';
 
 @Injectable()
 export class GeolocationService {
@@ -17,12 +18,9 @@ export class GeolocationService {
     };
 
     return new Promise<GeolocationResult>((resolve, reject) => {
-
       navigator.geolocation.getCurrentPosition(
         (position) => resolve(new GeolocationResult(position))
-        , (error) => {
-          // TODO: Finish this
-        }
+        , reject
         , options
       );
     });
@@ -30,12 +28,3 @@ export class GeolocationService {
 
 }
 
-class GeolocationResult {
-  longitude: number;
-  latitude: number;
-
-  constructor(position: Position) {
-    this.longitude = position.coords.longitude;
-    this.latitude = position.coords.latitude;
-  }
-}
