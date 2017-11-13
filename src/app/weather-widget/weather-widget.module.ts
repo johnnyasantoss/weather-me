@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { AlertModule } from 'ngx-bootstrap';
 
-import { WeatherWidgetComponent } from './weather-widget.component';
-
 // services
 import { GeolocationService } from './services/geolocation.service';
+
+import { WeatherWidgetComponent } from './weather-widget.component';
+import { DayInfoComponent } from './day-info/day-info.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { GeolocationService } from './services/geolocation.service';
     , AlertModule.forRoot()
   ]
   , declarations: [
-    WeatherWidgetComponent
+    WeatherWidgetComponent,
+    DayInfoComponent
   ]
   , exports: [
     WeatherWidgetComponent

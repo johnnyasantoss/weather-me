@@ -1,6 +1,13 @@
-<div class="container-fluid">
-    <input type="text" [ngModel]="searchText" [class.hidden]="hasntGeoAccess" />
+<div class="container-fluid widget-box">
+    <input type="text" [(ngModel)]="searchText" [class.d-none]="hasntGeoAccess" />
     <div class="col-xs-3">
         {{ searchText }}
+    </div>
+    <div class="d-flex flex-row">
+        <app-day-info></app-day-info>
+        <app-day-info></app-day-info>
+        <app-day-info></app-day-info>
+        <app-day-info></app-day-info>
+        <app-day-info></app-day-info>
     </div>
 </div>
